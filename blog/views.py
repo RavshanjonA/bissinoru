@@ -25,4 +25,3 @@ class OrderItemAPIView(APIView):
         return  Response(serilizer.data)
 
 
-
