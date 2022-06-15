@@ -31,6 +31,6 @@ class OrderItem(models.Model):
             self.sum_cost =sum(item.cost for item in self.items.all())
         super(OrderItem, self).save()
 
-
+    c
 
 
