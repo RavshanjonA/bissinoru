@@ -15,13 +15,14 @@ class ItemViewSet(APIView):
 
     def get(self, request, *args, **kwargs):
         items = Item.objects.all()
-        serializer = ItemSerializer(items, many=True)
+        serializer = ItemSerializer(items,many=True)
         return Response(serializer.data)
-
-
 class OrderItemAPIView(APIView):
 
-    def get(self, request, *args, **kwargs):
+    def get(self,request, *args, **kwargs):
         orders = OrderItem.objects.all()
-        serilizer = OrderItemSerializer(orders, many=True)
-        return Response(serilizer.data)
+        serilizer = OrderItemSerializer(orders,many=True)
+        return  Response(serilizer.data)
+
+
+
