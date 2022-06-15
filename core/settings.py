@@ -22,7 +22,6 @@ INSTALLED_APPS = [
     'drf_yasg',
     'widget_tweaks',
     'rest_framework',
-    'blog',
     'corsheaders',
     'product'
 
