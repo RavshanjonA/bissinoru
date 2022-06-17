@@ -20,13 +20,6 @@ class Product(models.Model):
         verbose_name_plural = "Products"
         db_table = "product"
 
-class OrderProduct(models.Model):
-    product_id = models.ForeignKey(Product, null=False, blank=False)
-    count = models.IntegerField(null=False, blank=False)
-    class Meta:
-        verbose_name = "OrderProduct"
-        verbose_name_plural = "OrderProducts"
-        db_table = "orderproduct"
 
 
 class Order(models.Model):
