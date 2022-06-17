@@ -10,6 +10,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+TELEGRAM = {
+    'bot_token': '5520324447:AAHnDa-SrfHruSzHQkBUCPq-4-w--e5SHWw',
+    'channel_name': 'savdo_system',
+}
+
+
 CORS_ORIGIN_ALLOW_ALL = True
 
 INSTALLED_APPS = [
