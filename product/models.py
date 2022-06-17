@@ -25,7 +25,7 @@ class Product(models.Model):
 class Order(models.Model):
     username = models.CharField(max_length=128, null=False, blank=False)
     phone = models.CharField(max_length=56, verbose_name="Phone number", null=False, blank=False)
-    products = models.ManyToManyField("product.Product", related_name="order-pruducts")
+    products = models.ManyToManyField("product.Product", related_name="pruducts")
     address = models.TextField()
     summa = models.CharField(max_length=128, null=False, blank=False)
 
