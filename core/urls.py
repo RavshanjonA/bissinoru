@@ -28,5 +28,8 @@ urlpatterns = [
                   path('admin/', admin.site.urls),
                   path('api/v1/products/', ProductAPIView.as_view(), name="product-list"),
                   path('api/v1/orders/', OrderAPIView.as_view(), name="order-list"),
-              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL,
+              ]
+
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL,
                                                                                          document_root=settings.STATIC_ROOT)

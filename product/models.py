@@ -1,7 +1,5 @@
 from django.db import models
 
-from product.assests.bot import order_product_on_telegram
-
 
 def nameFile(instance, filename):
     return '/'.join(['images', str(instance.title), filename])
@@ -23,7 +21,6 @@ class Product(models.Model):
         db_table = "product"
 
 
-
 class Order(models.Model):
     username = models.CharField(max_length=128, null=False, blank=False)
     phone = models.CharField(max_length=56, verbose_name="Phone number", null=False, blank=False)
@@ -31,9 +28,9 @@ class Order(models.Model):
     address = models.TextField()
     summa = models.CharField(max_length=128, null=False, blank=False)
 
-    def save(self, force_insert=False, force_update=False, using=None, update_fields=None):
-        order_product_on_telegram(self)
-        super().save(force_insert, force_update, using, update_fields)
+    @property
+    def product_list(self):
+        return self.products.values_list()
 
     def __str__(self):
         return f"{self.username} : {self.summa} "

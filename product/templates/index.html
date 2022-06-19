@@ -1,0 +1,7 @@
+<a ><strong>Klient: </strong>{{ order.username }}</a>
+<a ><strong>Klient raqamii: </strong>{{ order.phone }}</a>
+<a ><strong>Manzil:</strong>{{ order.address }}</a>
+<a ><strong>Buyurnurtma umumiy miqdori: </strong>{{ order.summa }}</a>
+{% for product in order.products %}
+<a ><strong>Mahsulat {{ forloop.counter }}: </strong>{{ product.title|linebreaksbr  }} <strong> O'lchamii:</strong> {{ product.size }} </a>
+{% endfor %}

@@ -3,9 +3,10 @@ import telegram
 from django.conf import settings
 from django.template.loader import render_to_string
 
+
 def order_product_on_telegram(orders):
     message_html = render_to_string('index.html', {
-        'orders': orders
+        'order': orders
     })
     telegram_settings = settings.TELEGRAM
     bot = telegram.Bot(token=telegram_settings['bot_token'])
