@@ -14,7 +14,9 @@ TELEGRAM = {
     'bot_token': '5520324447:AAHnDa-SrfHruSzHQkBUCPq-4-w--e5SHWw',
     'channel_name': 'savdo_system',
 }
-
+SWAGGER_SETTINGS = {
+   'USE_SESSION_AUTH': False
+}
 
 CORS_ORIGIN_ALLOW_ALL = True
 
