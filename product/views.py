@@ -9,7 +9,7 @@ from product.serializers import ProductSerializer, OrderSerializer
 class ProductAPIView(APIView):
     def get(self, request):
         products = Product.objects.all()
-        serializer = ProductSerializer(products, many=True)
+        serializer = ProductSerializer(products, many=True, context={'request': request})
         return Response(data=serializer.data)
     # def post(self, request, *args, **kwargs):
     #     file = request.data['file']
